@@ -1,0 +1,19 @@
+syntax = "proto3";
+option go_package = ".;pb";
+import "comm.proto";
+
+message DB_UserData{
+    uint32 Id = 1;
+    string PhonOrEmail = 2;
+    string Password = 3;
+    string NickName = 4;
+    string HeadUrl = 5;
+    UserRole UserRole = 6;
+    string Token = 7;
+}
+
+//用户缓存
+message Cache_UserData {
+    DB_UserData Db_UserData = 1;       //用户信息
+    bool IsOnLine = 2;                 //是否在线
+}

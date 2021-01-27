@@ -1,0 +1,10 @@
+{
+  "lego":"Lego",
+  "console":"控制台",
+  "devops":"运营",
+  "login":"登录",
+  "register":"注册",
+  "inputphoneoreamil":"请输入手机或者邮箱",
+  "inputVerification":"请输入验证码",
+  "getverification":"获取验证码"
+}

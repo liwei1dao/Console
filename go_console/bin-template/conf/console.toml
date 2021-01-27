@@ -1,0 +1,53 @@
+Id = "console"                      #服务的唯一id 不可重复
+Tag = "lego"                          #服务集群标签 相同标签 sys.registry 和 sys.rpc 配置一致 即可互相发现和通信
+Type = "console"                      #服务类型 相同服务类型相同 如 多个login 服务 相同服务多开 服务类型一致
+Category = "BusinessService"        #服务类别 例如 网关服务器 或者 游戏服务器 以及普通业务服务器
+Version = 1.0                         #服务版本 多服务器相同的服务类型 高版本比低版本拥有更高的访问优先级 使用场景 热更新机制
+
+[Settings]
+
+# 日志系统  基础系统 每个服务默认启动
+[Sys.log]
+FileName = "./log/console.log"      #日志保存路径
+Loglayer = 2                        #日志打印层级
+Loglevel = 0                        #日志输出级别
+Debugmode = true                    #是否开启debug模式
+# 注册表系统 集群服务基础系统 集群服务默认启动
+[Sys.registry]
+ConsulAddr = "127.0.0.1:8500"       #Consul服务地址
+# rpc通信系统 集群服务基础系统 集群服务默认启动
+[Sys.rpc]
+NatsAddr = "nats://127.0.0.1:4222"  #Nats服务地址
+[Sys.db]
+MongodbUrl = "mongodb://127.0.0.1:27017"
+MongodbDatabase = "lego"
+[Sys.cache]
+RedisUrl = "redis://127.0.0.1:6379/1"
+[Sys.captcha]
+RedisUrl = "redis://127.0.0.1:6379/1"
+Serverhost = "smtp.qq.com"
+Fromemail = "liwei1dao@foxmail.com"
+Fompasswd = "tucfnwfgmnqleaaf"
+Serverport = 587
+CaptchaExpirationdate = 60
+
+# [Modules]
+[Modules.SM_ConsoleModule]
+HttpAddr = ":9567"                          #web端口
+SignKey = "@234%67g12q4*67m12#4l67!"        #签名密钥 长度 24 对称加密需要固定长度密钥
+UserInitialPassword = "88888888"            #用户初始化密码
+ProjectName= "演示项目"
+ProjectDes="演示集群后台系统项目，实现后台系统开发框架，支持后台扩展开发，完成核心控制台业务..."
+ProjectVersion = 1.0
+ProjectTime = "2020-05-23 09:58"
+[Modules.SM_ConsoleModule.ProjectMember.001] #项目成员
+MemberName="李伟"
+ProjectPosition="设计"
+[Modules.SM_ConsoleModule.ProjectMember.002] #项目成员
+MemberName="李伟"
+ProjectPosition="开发"
+[Modules.SM_ConsoleModule.ProjectMember.003] #项目成员
+MemberName="李伟"
+ProjectPosition="美术"
+
+
