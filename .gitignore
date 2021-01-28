@@ -1,33 +1,22 @@
-# IDE ignore
-*.ipr
-*.iml
-*.iws
-
-# temp ignore
-*.log
-*.cache
-*.diff
-*.exe
-*.exe~
-*.patch
-*.tmp
-*.swp
-
-# system ignore
 .DS_Store
-Thumbs.db
-
-# build
-/target
-/configs
+node_modules
 /dist
-yueliao
-chatres
-.vscode
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
 .idea
-# /bin/win/conf
-bin
-docker_console/vue_console
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 docker_console/go_console
-
-
+docker_console/vue_console
