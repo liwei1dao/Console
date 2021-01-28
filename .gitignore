@@ -1,0 +1,33 @@
+# IDE ignore
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.exe
+*.exe~
+*.patch
+*.tmp
+*.swp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# build
+/target
+/configs
+/dist
+yueliao
+chatres
+.vscode
+.idea
+# /bin/win/conf
+bin
+docker_console/vue_console
+docker_console/go_console
+
+

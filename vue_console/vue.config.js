@@ -12,7 +12,7 @@ module.exports = {
   ],
   //基础配置 详情看文档
   publicPath: './',
-  outputDir: 'dist',
+  outputDir: '../docker_console/vue_console',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
