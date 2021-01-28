@@ -77,5 +77,9 @@
   "servicepreweight":"服务权重",
   "servicegoroutine":"服务携程",
   "servicemonitor":"服务监控",
-  "noconfiguration":"没有配置信息"
+  "noconfiguration":"没有配置信息",
+  "demo":"演示",
+  "component":"组件",
+  "divider":"分割线",
+  "message":"消息"
 }
