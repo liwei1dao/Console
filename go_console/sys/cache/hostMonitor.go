@@ -24,11 +24,12 @@ func (this *Cache) AddNewHostMonitor(data *pb.HostMonitor) {
 func (this *Cache) GetHostMonitor(timeleng int32) (result []*pb.HostMonitor) {
 	result = make([]*pb.HostMonitor, 0)
 	pool := this.redis.GetPool()
-	value := pool.GetListByLrange(string(Cache_HostMonitor), 0, timeleng, reflect.TypeOf(&pb.HostMonitor{}))
-	if value != nil && len(value) > 0 {
-		result = make([]*pb.HostMonitor, len(value))
-		for i, v := range value {
-			result[i] = v.(*pb.HostMonitor)
+	if value, err := pool.GetListByLrange(string(Cache_HostMonitor), 0, timeleng, reflect.TypeOf(&pb.HostMonitor{})); err != nil {
+		if value != nil && len(value) > 0 {
+			result = make([]*pb.HostMonitor, len(value))
+			for i, v := range value {
+				result[i] = v.(*pb.HostMonitor)
+			}
 		}
 	}
 	return

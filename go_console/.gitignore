@@ -15,5 +15,6 @@
 # vendor/
 *.out
 *.log
+vendor
 .vscode/
 bin/

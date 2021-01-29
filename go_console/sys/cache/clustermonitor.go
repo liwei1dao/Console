@@ -29,11 +29,12 @@ func (this *Cache) GetClusterMonitor(sIs string, timeleng int32) (result []*pb.C
 	result = make([]*pb.ClusterMonitor, 0)
 	id := fmt.Sprintf(string(Cache_ClusterMonitor), sIs)
 	pool := this.redis.GetPool()
-	value := pool.GetListByLrange(id, 0, timeleng, reflect.TypeOf(&pb.ClusterMonitor{}))
-	if value != nil && len(value) > 0 {
-		result = make([]*pb.ClusterMonitor, len(value))
-		for i, v := range value {
-			result[i] = v.(*pb.ClusterMonitor)
+	if value, err := pool.GetListByLrange(id, 0, timeleng, reflect.TypeOf(&pb.ClusterMonitor{})); err == nil {
+		if value != nil && len(value) > 0 {
+			result = make([]*pb.ClusterMonitor, len(value))
+			for i, v := range value {
+				result[i] = v.(*pb.ClusterMonitor)
+			}
 		}
 	}
 	return
