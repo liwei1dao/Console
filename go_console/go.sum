@@ -363,6 +363,8 @@ github.com/leodido/go-urn v1.2.0/go.mod h1:+8+nEpDfqqsY+g338gtMEUOtuK+4dEMhiQEgx
 github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lib/pq v1.1.1/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/linode/linodego v0.7.1/go.mod h1:ga11n3ivecUrPCHN0rANxKmfWBJVkOXfLMZinAbj2sY=
+github.com/liwei1dao/lego v0.0.0-20210128013547-5f369f21a6a9 h1:z0RgyI3VAtBJBOuorM6pkRi7Wpyx1XbUMGdHUvL3o6o=
+github.com/liwei1dao/lego v0.0.0-20210128013547-5f369f21a6a9/go.mod h1:A2oSv8XiAfGsk1amEoS3E/FAGugRWyfAS4uBQlvgHWU=
 github.com/liwei1dao/lego v1.0.1 h1:PVeB04Umaz8vjwcJ+85ONSs7LpAr7kuNNb0wFe7Fd2Y=
 github.com/liwei1dao/lego v1.0.1/go.mod h1:OEn7p0uPZYkcbXLadTs0S+PND2OhrqN4Mb/K6f6Zs4E=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
