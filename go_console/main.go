@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"lego_console/modules/console"
-	"lego_console/services"
 
 	"github.com/liwei1dao/lego"
 	"github.com/liwei1dao/lego/base/cluster"
@@ -31,9 +30,5 @@ func NewService(ops ...cluster.Option) core.IService {
 }
 
 type ConsoleService struct {
-	services.BaseService
-}
-
-func (this *ConsoleService) InitSys() {
-	this.BaseService.InitSys()
+	cluster.ClusterService
 }
